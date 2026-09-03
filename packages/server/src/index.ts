@@ -1,18 +1,47 @@
 import { Hono } from "hono";
+import { sentry } from "@sentry/hono/bun";
+import * as Sentry from "@sentry/hono/bun";
 import { HTTPException } from "hono/http-exception";
 
 import sessions from "./routes/sessions";
 
 const app = new Hono();
 
+app.use(
+  sentry(app, {
+    dsn: "https://e211762f87923f37fb4d8d2800145680@o4510744309202944.ingest.de.sentry.io/4512022642819152",
+    tracesSampleRate: 1.0,
+    enableLogs: true,
+    enableMetrics: true,
+  }),
+);
+
+app.get("debug-sentry", () => {
+    Sentry.logger.info("User triggered test error", {
+        action: "test_error_endpoint",
+    });
+    Sentry.metrics.count("test_counter", 1);
+    throw new Error("My first Sentry error!");
+});
+
 app.onError((error, c) => {
     if (error instanceof HTTPException) {
-        return c.json({
-            error: error.message || "Request failed",
-        }, error.status);
+        Sentry.logger.warn("Handled HTTP error", {
+            status: error.status,
+            message: error.message || "Request failed",
+            path: c.req.path,
+            method: c.req.method
+        });
+
+        return c.json({ error: error.message || "Request failed" }, error.status);
     }
 
-    console.error("Unhandled server error", error);
+    Sentry.logger.error("Unhandled server error", {
+        path: c.req.path,
+        method: c.req.method,
+        message: error instanceof Error ? error.message : "Unknown error",
+    });
+
     return c.json({ error: "Internal server error" }, 500);
 });
 
