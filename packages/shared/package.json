@@ -1,0 +1,11 @@
+{
+    "name": "@nightcode/shared",
+    "type": "module",
+    "private": true,
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "dependencies": {
+        "zod": "^4.5.4"
+    }
+}
