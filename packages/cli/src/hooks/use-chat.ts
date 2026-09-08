@@ -278,7 +278,7 @@ export function useChat(sessionId: string, initialMessages: Message[]) {
     useEffect(() => {
         if (hasAutoResumedRef.current) return;
 
-        const last = messages[messages.length - 1];
+        const last = initialMessages[initialMessages.length - 1];
         if (!last || last.role !== "user") return;
 
         hasAutoResumedRef.current = true;
@@ -286,7 +286,7 @@ export function useChat(sessionId: string, initialMessages: Message[]) {
     }, [initialMessages, resume]);
 
     const submit = useCallback(async ({ userText, mode, model }: SubmitParams) => {
-        // Show the partial answer answer before sending the next message
+        // Show the partial answer before sending the next message
         stopActiveStream(true);
 
         const userMessage: Message = {

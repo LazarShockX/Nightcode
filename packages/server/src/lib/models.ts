@@ -46,7 +46,7 @@ function resolveSupportedChatModel(model: SupportedChatModel): ResolvedModel {
 }
 
 export function isSupportedChatModel(modelId: string): modelId is SupportedChatModelId {
-    return findSupportedChatModel(modelId) !== null;
+    return findSupportedChatModel(modelId) != null;
 }
 
 export function resolveChatModel(modelId: string): ResolvedModel {
