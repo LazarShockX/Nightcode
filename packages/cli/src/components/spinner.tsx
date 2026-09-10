@@ -1,10 +1,16 @@
 import "opentui-spinner/react";
+import { Mode } from "@nightcode/database/enums";
 import { useTheme } from "../providers/theme";
 
-export function Spinner() {
+type Props = {
+    mode?: Mode;
+}
+
+export function Spinner({ mode = Mode.BUILD }: Props) {
     const { colors } = useTheme();
+    const activeColor = mode === Mode.PLAN ? colors.planMode : colors.primary;
 
     return (
-        <spinner name="aesthetic" color={colors.primary} />
+        <spinner name="aesthetic" color={activeColor} />
     );
 }
