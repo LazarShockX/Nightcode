@@ -114,7 +114,7 @@ export function InputBar({ onSubmit, disabled }: Props) {
         if (disabled) return;
         if (!isTopLayer("base")) return;
         if (key.name === "tab") {
-            key.preventDefault
+            key.preventDefault();
             toggleMode();
         }
     });

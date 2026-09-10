@@ -13,7 +13,7 @@ type Session = InferResponseType<(typeof apiClient.sessions)["$get"], 200>[numbe
 
 export const SessionsDialogContent = () => {
     const [sessions, setSessions] = useState<Session[]>([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const { close } = useDialog();
     const navigate = useNavigate();
     const { show } = useToast();
