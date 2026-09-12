@@ -103,7 +103,6 @@ async function streamAIResponse(stream: Parameters<Parameters<typeof streamSSE>[
         });
 
         for await (const part of result.stream) {
-            console.log(part.type, part);
             if (stream.aborted) {
                 break;
             }
