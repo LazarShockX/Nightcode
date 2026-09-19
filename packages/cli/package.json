@@ -21,6 +21,7 @@
     "date-fns": "^4.4.0",
     "eventsource-parser": "^4.1.0",
     "hono": "^4.13.5",
+    "open": "^11.0.3",
     "opentui-spinner": "^0.0.7",
     "pretty-ms": "^9.3.1",
     "react": "^19.2.8",
