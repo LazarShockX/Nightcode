@@ -1,4 +1,4 @@
-import { dirname, relative, resolve } from "path";
+import { relative, resolve } from "path";
 import { readFile } from "fs/promises";
 import { tool } from "ai";
 import { z } from "zod";
