@@ -8,15 +8,15 @@
         "./enums": "./src/enums.ts"
     },
     "scripts": {
-        "db:generate": "bunx --bun prisma generate"
+        "db:generate": "bunx --bun prisma@7.10.0 generate"
     },
     "devDependencies": {
-        "@types/node": "^26.4.1",
-        "prisma": "7.10.0"
+        "@types/node": "^26.4.1"
     },
     "dependencies": {
         "@prisma/adapter-pg": "^7.10.0",
         "@prisma/client": "^7.10.0",
-        "dotenv": "^17.4.2"
+        "dotenv": "^17.4.2",
+        "prisma": "7.10.0"
     }
 }
