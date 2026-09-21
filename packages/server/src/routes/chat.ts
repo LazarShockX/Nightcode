@@ -283,7 +283,7 @@ async function streamAIResponse(stream: Parameters<Parameters<typeof streamSSE>[
 }
 
 const app = new Hono<AuthenticatedEnv>()
-    .post("/:sessionId/resume", async (c) => {
+    .post("/:sessionId/resume", requireCreditsBalance, async (c) => {
         const sessionId = c.req.param("sessionId");
         const userId = c.get("userId");
 
