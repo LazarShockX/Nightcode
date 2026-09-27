@@ -16,7 +16,7 @@ import { useKeyboardLayer } from "../providers/keyboard-layer";
 import { useTheme } from "../providers/theme";
 import { useToast } from "../providers/toast";
 import { usePromptConfig } from "../providers/prompt-config";
-import { Mode } from "@nightcode/database/enums";
+import { Mode } from "@nightcode/shared";
 
 const MAX_VISIBLE_MENTIONS = 8;
 const CURRENT_DIRECTORY = process.cwd();

@@ -14,12 +14,12 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@nightcode/database": "workspace:*",
+    "@ai-sdk/react": "^4.0.117",
     "@nightcode/shared": "workspace:*",
     "@opentui/core": "^0.5.8",
     "@opentui/react": "^0.5.8",
+    "ai": "^7.0.114",
     "date-fns": "^4.4.0",
-    "eventsource-parser": "^4.1.0",
     "hono": "^4.13.5",
     "open": "^11.0.3",
     "opentui-spinner": "^0.0.7",

@@ -31,7 +31,7 @@ export function SessionShell({ children, onSubmit, inputDisabled = false, loadin
                 stickyScroll
                 stickyStart="bottom"
             >
-                <box gap={1}>
+                <box>
                     {children}
                 </box>
             </scrollbox>
