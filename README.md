@@ -83,7 +83,11 @@ A terminal-based AI coding agent inspired by tools like Claude Code and OpenCode
 Create a `.env` file with the following variables:
 
 ```env
+# Local development
 API_URL="http://localhost:3000"
+
+# Production (replace with your deployment URL)
+# API_URL=
 
 # Neon PostgreSQL
 DATABASE_URL=
