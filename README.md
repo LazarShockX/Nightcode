@@ -51,7 +51,7 @@ A terminal-based AI coding agent inspired by tools like Claude Code and OpenCode
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **OpenTUI** - Library to build UI for terminals
+- **[OpenTUI](https://opentui.com/docs/)** - Library to build UI for terminals
 - **React 19** - Build interactive UI with reusable components
 - **TypeScript** - Type-safe development
 
