@@ -70,7 +70,7 @@ A terminal-based AI coding agent inspired by tools like Claude Code and OpenCode
 - **[Polar](https://polar.sh/)** - Subscription and payment management
 
 ### Additional Tools
-- **Bun** - A fast JavaScript and TypeScript runtime that executes code directly on your machine, serving as an alternative to Node.js while also providing a built-in package manager and HTTP server
+- **[Bun](https://bun.com/)** - A fast JavaScript and TypeScript runtime that executes code directly on your machine, serving as an alternative to Node.js while also providing a built-in package manager and HTTP server
 - **[Sentry](https://sentry.io/)** - Error monitoring tool
 - **shadcn/ui (Base UI)** - Customizable and reusable components
 - **React Context** - Share state across components without manually passing props through every level of the component tree (prop drilling)
