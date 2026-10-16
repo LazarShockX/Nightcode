@@ -118,7 +118,7 @@ POLAR_CREDITS_METER_ID=
 - `bun run dev:server` - Start the Hono server with hot reload
 - `bun run build:cli` - Build the CLI package
 - `bun run link:cli` - Build and link the `nightcode` executable
-- `bun run --cwd packages/database db:generate`
+- `bun run --cwd packages/database db:generate` - Generate the Prisma client
 
 ### Packages
 NightCode is a monorepo that consists of the following packages:
